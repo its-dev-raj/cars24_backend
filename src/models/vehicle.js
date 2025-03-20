@@ -34,7 +34,6 @@ const VehicleSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-
     fuelType: {
       type: String,
       enum: ["Petrol", "Diesel", "Electric", "Hybrid", "CNG", "LPG"], // you can adjust types
@@ -43,6 +42,10 @@ const VehicleSchema = new mongoose.Schema(
     images: {
       type: [String], // Array of image URLs or paths
       default: [],
+    },
+    thumbnail: {
+      type: String, // Single thumbnail URL or path
+      default: "",
     },
     owners: {
       type: String,

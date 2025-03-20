@@ -5,6 +5,7 @@ const vehicleValidationSchema = z.object({
   brand: z.string().min(1, "Brand is required"),
   model: z.string().min(1, "Model is required"),
   location: z.string().min(1, "Location is required"),
+  thumbnail: z.string().min(1, "thumbnail is required"),
   year: z.number().min(1886, "Enter a valid year"),
   totalKmDriven: z.number().min(0, "KM driven must be positive"),
   price: z.number().min(0, "price must be positive"),
